@@ -1,20 +1,33 @@
 import React from 'react';
 
-function Nav() {
+function Nav(props) {
+    const {
+        tabs = [],
+        setCurrentTab,
+        currentTab
+    } = props;
 
     return(
         <header>
             <h1>Michael Arvelo</h1>
             <nav>
                 <ul>
-                    <li> <a id="aboutBtn" href="#about">About Me</a></li>
-                    <li> <a href="#work">Work</a></li>
-                    <li> <a href="#contact">Contact me</a></li>
-                    <li> <a href="./assets/images/MichaelArvelo_Resume.pdf" target="_blank">Resume</a></li>
+                    {tabs.map((tab, index) => {
+                        return(
+                            <li key={index} >
+                                <a
+                                  onClick={() => setCurrentTab(tab)}
+                                  className={currentTab.name === tab.name && 'navActive'} 
+                                >
+                                    {tab.name}
+                                </a>
+                            </li>
+                        )
+                    })}
                 </ul>
             </nav>
         </header>
-    )
+    );
 };
 
 export default Nav;

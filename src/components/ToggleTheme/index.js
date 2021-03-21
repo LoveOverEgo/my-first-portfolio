@@ -1,9 +1,31 @@
 import React from 'react';
 
 function ToggleTheme() {
+    // Toggle theme on click of btn
+    var themeStatus = "light"; // start page on light mode
+    
+    function handleTheme() {
+        if (themeStatus === "dark") {
+            document.documentElement.style.setProperty("--bg", "var(--bgLight)");
+            document.documentElement.style.setProperty("--primary", "var(--primaryLight)");
+            document.documentElement.style.setProperty("--secondary", "var(--secondaryLight)");
+            document.documentElement.style.setProperty("--accent", "var(--accentLight)");
+            document.documentElement.style.setProperty("--boxShadow", "rgb(156 156 156)");
+
+            themeStatus = "light";
+        } else if (themeStatus === "light") {
+            document.documentElement.style.setProperty("--bg", "var(--bgDark)");
+            document.documentElement.style.setProperty("--primary", "var(--primaryDark)");
+            document.documentElement.style.setProperty("--secondary", "var(--secondaryDark)");
+            document.documentElement.style.setProperty("--accent", "var(--accentDark)");
+            document.documentElement.style.setProperty("--boxShadow", "black");
+
+            themeStatus = "dark";
+        }
+    };
 
     return(
-        <div class="theme">
+        <div class="theme" onClick={handleTheme} >
             <svg width="20px" height="20px">
                 <title>Theme toggle</title>
                 <defs></defs>

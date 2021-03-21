@@ -89,9 +89,16 @@ header nav ul li a {
     background-image: linear-gradient(var(--primary), var(--primary));
     background-repeat: no-repeat;
     padding-bottom: 3px;
+    cursor: pointer;
 }
 
 header nav ul li a:hover, header nav ul li a:active {
+    text-decoration: none;
+    transform: scale(1.1);
+    background-size: 100% 1px;
+}
+
+.navActive {
     text-decoration: none;
     transform: scale(1.1);
     background-size: 100% 1px;
@@ -106,9 +113,7 @@ footer {
 .cover {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 170px 0 0 0;
+    padding: 70px 0 0 70px;
     position: relative;
     scroll-snap-align: start;
     scroll-snap-stop: always;
