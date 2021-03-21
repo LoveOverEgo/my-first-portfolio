@@ -1,0 +1,690 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth !important;
+}
+
+/* Color Vars */
+/* Change depending on theme:: remove Dark/Light from here and toggle through js*/
+:root {
+    --bgLight: white;
+    --bgDark: #0f1117;
+    --primaryLight: #111213;
+    --primaryDark: #ffffff;
+    --secondaryLight: rgb(197, 197, 197);
+    --secondaryDark: #4e5257;
+    --accentDark: #303940;
+    --accentLight:#C7D0E1;
+
+    --bg: var(--bgLight);
+    --primary: var(--primaryLight);
+    --secondary: var(--secondaryLight);
+    --accent: var(--accentLight);
+    --boxShadow: black; /* Specifically for work section cards */
+}
+
+
+
+html {
+    overflow: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.background {
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+}
+/* NAV STYLE STARTS */
+header {
+    display: flex;
+    margin: 0;
+    align-items: center;
+    justify-content: space-between;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+header h1 {
+    font-size: 30px;
+    margin: 15px 0;
+    padding: 10px 10px 10px 40px;
+}
+
+header nav ul {
+    display: flex;
+    width: 450px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header nav ul li a {
+    display: block;
+    color: inherit;
+    transition: transform .2s ease, background-size .2s ease-in-out;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-repeat: no-repeat;
+    padding-bottom: 3px;
+}
+
+header nav ul li a:hover, header nav ul li a:active {
+    text-decoration: none;
+    transform: scale(1.1);
+    background-size: 100% 1px;
+}
+/* NAV STYLE ENDS*/
+
+footer {
+    text-align: center;
+}
+
+/* HERO STYLE STARTS */
+.cover {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 170px 0 0 0;
+    position: relative;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+.cover .theme {
+    position: absolute;
+    top: 0;
+    left: 50px;
+}
+
+.cover .theme:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.cover .theme svg g{
+    fill: var(--primary);
+}
+
+.cover .profilePic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 5px 20px -9px rgb(0 0 0 / 80%);
+}
+
+.cover .profilepic div {
+    width: 200px;
+}
+
+.cover img {
+    width: 100%;
+}
+
+.cover .intro {
+    margin: 50px;
+    text-align: center;
+    display: inline-block;
+}
+
+.cover .intro h1 {
+    font-family: 'Roboto Mono', monospace;
+    border-right: .15em solid var(--primary);
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    letter-spacing: .15em; 
+}
+
+.cover .intro h1:nth-child(1) {
+    animation: typing 3s steps(30, end), blinking-selector .5s step-end 6 alternate;
+    animation-fill-mode: forwards;
+}
+
+.cover .intro h1:nth-child(2) {
+    width: 11.3em;
+    opacity: 0;
+    animation: typing2 3.5s steps(30, end), blinking-selector .5s step-end infinite alternate;
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+}
+  
+ /* The typing effect */
+ @keyframes typing {
+    0% { width: 0; }
+    99.9% { border-right: .15em solid var(--secondary); }
+    100% { 
+        border: none;
+        width: 87%;
+    }
+}
+
+@keyframes typing2 {
+    0% { 
+        width: 0;
+    }
+    1% { opacity: 1;}
+    100% { 
+        border-right: .15em solid var(--secondary);
+        opacity: 1;
+        width: 100%;
+    }
+}
+  
+/* The typewriter cursor effect */
+@keyframes blinking-selector {
+    50% { border-color: transparent; }
+}
+
+/* info/about tab */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	transition: all 0.2s ease;
+}
+
+.info .bio {
+    text-align: center;
+    overflow: hidden;
+    background: var(--accent);
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+    transition: width .5s ease, height .5s ease, font-size .2s ease;
+}
+
+.info .bio:hover {
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+}
+
+.info.active .bio {
+    width: 530px;
+    height: 100%;
+    border-radius: 5px;
+    font-size: 20px;
+	background: var(--accent);
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+.info .bio i.infoBtn {
+	display: block;
+}
+
+.info .fa-info {
+	padding: 8px;
+	cursor: pointer;
+	display: block;
+}
+
+.info.active .fa-info {
+	display: none !important;
+}
+
+.info .fa-angle-down {
+	cursor: pointer;
+    display: none;
+}
+
+.info.active .fa-angle-down {
+    display: block;
+    transition: font-size .1s ease;
+}
+
+.info.active .fa-angle-down:hover {
+	font-size: 2.5em;
+}
+
+.info.active h4 {
+    display: none;
+}
+
+.info p {
+    text-align: center;
+    padding: 24px;
+    display: none;
+    word-spacing: 1px;
+    width: 530px;
+}
+
+.info .social-icons {
+    display: flex;
+}
+
+.info .social-icons a {
+    color: var(--primary);
+    padding: 10px;
+    font-size: 20px;
+}
+
+.info a {
+    display: none;
+}
+
+.info.active p, .info.active a {
+    display: block;
+}
+/* HERO STYLE ENDS*/
+
+/* SECTIONS STYLE STARTS */
+.sections {
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sections .headerTwo {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 65px;
+    font-family: 'Roboto Mono', monospace;
+    letter-spacing: .15em;
+}
+
+.sections .headerTwo .section-title {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.sections .headerTwo .underline {
+    border-bottom: 1px solid var(--primary);
+    width: 50%;
+    margin: 1em 0px 1.5em;
+}
+
+/* APPLICATIONS */
+.applications {
+    position: relative;
+    width: 100%;
+    height: 580px;
+    overflow: scroll;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.applications ul {
+    position: absolute;
+    width: 475px;
+    justify-content: flex-start;
+}
+
+.applications ul .card {
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    list-style: none;
+    margin: 0 100px 0 0;
+    transition: 1s;
+}
+
+.applications ul .card.hover {
+    box-shadow: 0 24px 48px -16px #000;
+    transition: 2s;
+}
+
+.applications ul .card .work-content {
+    width: 350px;
+    height: 250px;
+    transition: 0.5s;
+}
+
+.applications ul .card .work-content.work1{
+    overflow-wrap: anywhere;
+    position: relative;
+    background-color: #4a4a4a;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+    border-radius: 5px;
+    box-shadow: 0 12px 24px -8px rgba(0,0,0,.8);
+}
+
+.applications ul .card .work-content.hover.work1{
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+
+.applications ul .card .work-content.work1 .content img {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    border-radius: 5px;
+    top: 0;
+    left: 0;
+    opacity: 0.7;
+    transition: 0.5s;
+    filter: blur(1px);
+}
+
+.applications ul .card .work-content.hover.work1 .content img {
+    opacity: 1;
+    border-radius: 5px 5px 0 0;
+    filter: none;
+}
+
+.applications ul .card .work-content.work1 .content h2, .applications ul .card .work-content.work1 .content h4 {
+    color: #ffffff;
+    margin: 10px 0 0;
+    padding: 0;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+.applications ul .card .work-content.hover.work1 .content h2, .applications ul .card .work-content.hover.work1 .content h4 {
+    opacity: 0;
+}
+
+
+.applications ul .card .work-content.work2{
+    position: relative;
+    background-color: #eaeaea;
+    color: #111213;
+    padding: 20px;
+    transform: translateY(-150px);
+    overflow: scroll;
+    border-radius: 5px;
+}
+
+.applications ul .card .work-content.hover.work2{
+    transform: translateY(0);
+    border-radius: 0 0 5px 5px;
+}
+
+.applications ul .card .work-content.hover.work2 .content p{
+    margin: 0;
+    padding: 0;
+}
+
+.applications ul .card:hover .work-content.hover.work2 .content a{
+    margin: 15px 0 0;
+    display:  inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #111213;
+    padding: 5px;
+    border: 1px solid #111213;
+    transition: all .2s ease;
+}
+
+.applications ul .card:hover .work-content.hover.work2 .content a:hover{
+    background: #111213;
+    color: #eaeaea;;
+}
+
+
+/* APPLICATION ENDS */
+
+/* CONTACT STARTS */
+#contact {
+    padding-bottom: 250px;
+}
+.contact-header {
+    padding-bottom: 100px;
+}
+
+.contact-info {
+    align-items: center;
+    margin: 0 0 0 22px;
+    flex-wrap: wrap;
+}
+
+.contact-info ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    text-decoration: none;
+}
+
+.contact-info ul li {
+    padding: 5px 5px;
+    font-size: 20px;
+}
+
+.contact-info ul li a {
+    color: #024e76;
+    padding: 5px 5px;
+    border-color: #024e76;
+    text-decoration: none;
+    transition: transform .2s ease, background-size .2s ease-in-out;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-repeat: no-repeat;
+    padding-bottom: 3px;
+}
+
+.contact-info ul li a:hover, header nav ul li a:active {
+    text-decoration: none;
+    transform: scale(1.1);
+    background-size: 100% 1px;
+}
+/* CONTACT ENDS */
+
+.flex-row {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS AND SMALLER */
+@media screen and (max-width: 980px) {
+    .contact-info ul li {
+        font-size: 22px;
+        padding: 0 5px;
+    }
+
+    .section-title{
+        font-size: 40px;
+    }
+}
+  
+/* MEDIA QUERY FOR TABLETS AND SMALLER */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 30px;
+        margin: 0;
+        text-align: center;
+    }
+
+    header nav {
+        align-self: center;
+        padding: 0;
+    }
+
+    header nav ul li a {
+        border-bottom: 0;
+    }
+
+    .cover {
+        padding: 100px 0 0 0;
+    }
+
+    .cover .theme {
+        top: 60px;
+    }
+
+    .cover h2 {
+        width: 375px;
+    }
+
+    #profilePic {
+        margin: 10px 10px 30px 130px;
+    }
+
+    .contact-info ul {
+        display: flex;
+        list-style: none;
+        flex-flow: column;
+    }
+
+    .contact-info ul li {
+        padding: 10px;
+    } 
+}
+
+/* MEDIA QUERY FOR MOBILE PHONES AND SMALLER */
+@media screen and (max-width: 575px) {
+
+    header h1 {
+        display: none;
+    }
+
+    header nav ul {
+        font-size: 17px;
+        padding: 25px 5px 5px 0;
+    }
+
+    .cover {
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .cover h2 {
+        margin: 5px;
+        width: 375px;
+    }
+
+    #profilePic {
+        width: 130px;
+        margin: 10px;
+    }
+
+    .intro {
+        width: 300px;
+    }
+
+    .info .fa-info {
+        padding: 0;
+    }
+
+    .info.active .bio {
+        width: 350px;
+    }
+
+    .info p {
+        padding: 10px;
+        width: 350px;
+    }
+
+    .intro :last-child {
+        font-size: 15px;
+    }
+
+    .sections {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .section-title {
+        text-align: center;
+    }
+
+    .sections .headerTwo .underline {
+        display: none;
+    }
+
+    .headerTwo {
+        align-self: center;
+    }
+
+    .cover h2 {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .applications {
+        width: 560px;
+    }
+
+    .applications, .bio, .contact-info {
+        padding-top: 10px;
+    }
+
+    .applications ul li:last-child {
+        padding-right: 70px;
+    }
+
+    .fa-envelope-open-text {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    header nav ul {
+        font-size: 15px;
+        width: 318px;
+    }
+
+    .info.active .bio {
+        width: 250px;
+    }
+
+    .info p {
+        width: 250px;
+    }
+
+    .applications ul .card .work-content {
+        width: 250px;
+    }
+
+    .applications ul .card .work-content .content div {
+        width: 220px;
+    }
+
+    .applications ul li:last-child {
+        padding-right: 170px;
+    }
+
+    .sections .headerTwo .section-title {
+        font-size: 2em;
+    }
+
+    .contact-info ul li {
+        font-size: 16px;
+    }
+}

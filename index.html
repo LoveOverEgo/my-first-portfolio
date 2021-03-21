@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css' integrity='sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==' crossorigin='anonymous'/>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,300&family=Roboto+Mono&display=swap" rel="stylesheet">        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">  -->
+        <link rel="stylesheet" href="./assets/css/style.css" />
+        <title>Michael's Portfolio</title>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <header>
+            <h1>Michael Arvelo</h1>
+            <nav>
+                <ul>
+                    <li> <a id="aboutBtn" href="#about">About Me</a></li>
+                    <li> <a href="#work">Work</a></li>
+                    <li> <a href="#contact">Contact me</a></li>
+                    <li> <a href="./assets/images/MichaelArvelo_Resume.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="background"></div>
+
+        <!-- Cover -->
+        <section id="about" class="cover">
+            <!-- add contrast svg -->
+            <div class="theme">
+                <svg width="20px" height="20px">
+                    <title>Theme toggle</title>
+                    <defs></defs>
+                    <g>
+                        <g transform="translate(-180.000000, -4199.000000)">
+                            <g transform="translate(56.000000, 160.000000)">
+                                <path d="M126,4049 C126,4044.589 129.589,4041 134,4041 L134,4057 C129.589,4057 126,4053.411 126,4049 M134,4039 C128.477,4039 124,4043.477 124,4049 C124,4054.523 128.477,4059 134,4059 C139.523,4059 144,4054.523 144,4049 C144,4043.477 139.523,4039 134,4039"></path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <div class="profilePic">
+                <div>
+                    <img src="./assets/images/profile.JPG" alt="profile picture" title="Michael's picture 2020" />
+                </div>
+            </div>
+            <div class="intro">
+                <h1>Michael Arvelo</h1>
+                <h1>Full-Stack Web Developer</h1>
+            </div>
+            <div class="info">
+                <div class="bio">
+                    <p>I am a passionate developer and enjoy putting my all into my work. I love learning new programming languages and frameworks, always improving what I already know, and putting my skills to the test!</p>
+                    <i class="fa fa-info fa-1x infoBtn"></i>
+                </div>
+                <div class="social-icons">
+                    <a href="https://stackoverflow.com/users/13529182/michael-arvelo" target="_blank" title="Stack OverFlow">
+                        <i class="fab fa-stack-overflow"></i>
+                    </a>
+                    <a href="https://github.com/MichaelDevelopsCode" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/michael-arvelo-169925148/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://twitter.com/MichaelDevsCode" target="_blank" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <i class="fa fa-angle-down fa-2x infoBtn"></i>
+                <h4>About Me</h4>
+
+            </div>
+        </section>
+
+        <!-- Work Section -->
+        <section id="work" class="sections">
+            <div class="headerTwo">
+                <h2 class="section-title">Work</h2>
+                <div class="underline">
+                </div>
+            </div>
+            <div id="apps" class="applications flex-row">
+                <ul class="flex-row">
+                    <li class="card isVisible">
+                        <div class="work-content work1">
+                            <div class="content">
+                                <img src="./assets/images/photohut.png" alt="photohut website"/>
+                                <div>
+                                    <h2>Photo Hut</h2>
+                                    <h4>NODE.JS/MYSQL/HANDLEBARS/EXPRESS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-content work2">
+                            <div class="content">
+                                <p>PhotoHut is a community site for professional photographers that uses a comment and voting system.  We use Node.js, with express, handlebars, routes, and mysql for the database. Built in collaboration with a group of student developers attending UCF Boot Camp.</p>
+                                <a href="https://ucf-photo-hut.herokuapp.com/" target="_blank">Visit live site</a>
+                                <a href="https://github.com/Azambik/Photo-Hut" target="_blank">Visit GitHub Repo</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="work-content work1">
+                            <div class="content">
+                                <img src="./assets/images/plan-your-date-night.png" alt="plan your date night website"/>
+                                <div>
+                                    <h2>Plan Your Date Night</h2>
+                                    <h4>HTML/CSS/APIs/JS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-content work2">
+                            <div class="content">
+                                <p>This website was built in collaboration with a group of student developers attending UCF Boot Camp. We use HTML, CSS, JavaScript, Jquery, Foundation, and APIs to display recipes for meals and cocktails. The user searches ingredients and is presented with corresponding recipes. The user is also able to store recipes and a shopping list via local storage.</p>
+                                <a href="https://michaeldevelopscode.github.io/plan-your-date-night" target="_blank">Visit live site</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="work-content work1">
+                            <div class="content">
+                                <img src="./assets/images/run-buddy.png" alt="run buddy website"/>
+                                <div>
+                                    <h2>Run Buddy</h2>
+                                    <h4>HTML/CSS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-content work2">
+                            <div class="content">
+                                <p>This website was built with just HTML and CSS to mock a business site that provides a running trainer.</p>
+                                <a href="https://michaeldevelopscode.github.io/run-buddy/" target="_blank">Visit live site</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="card">
+                        <div class="work-content work1">
+                            <div class="content">
+                                <img src="./assets/images/horiseon.png" alt="horiseon website"/>
+                                <div>
+                                    <h2>Horiseon</h2>
+                                    <h4>HTML/CSS</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="work-content work2">
+                            <div class="content">
+                                <p>This website was built with just HTML and CSS to mock a Marketing Agency site. This website aims to enhance accessibility and optimization for search engines by using semantic HTML elements, logical structure, alt attributes for images, and including a concise title.​​​</p>
+                                <a href="https://michaeldevelopscode.github.io/horiseon-optimal-refactor/" target="_blank">Visit live site</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                         
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" class="sections">
+            <div class="contact-header headerTwo flex-row">
+                <h2 class="section-title">
+                    Contact Me 
+                </h2>
+            </div>
+            <div class="contact-info flex-row">
+                <ul>
+                    <li>
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/MichaelDevelopsCode" target="_blank">
+                            GitHub
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/michael-arvelo-169925148/" target="_blank" >
+                            LinkedIn
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fab fa-stack-overflow"></i>
+                        <a href="https://stackoverflow.com/users/13529182/michael-arvelo" target="_blank" >
+                             StackOverFlow
+                        </a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a> MichaelDevelopsCode@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a> 407-963-2618</a>
+                    </li>
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <h2> Developed by Michael Arvelo </h2>
+            <div>
+                &copy; 2020 Michael (Miguel) Arvelo
+            </div>
+        </footer>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
