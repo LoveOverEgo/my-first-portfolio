@@ -16,7 +16,12 @@ function App() {
     <div className="App">
       <Nav tabs={tabs} setCurrentTab={setCurrentTab} currentTab={currentTab}/>
       <div class="background"></div>
-      <About />
+      <main>
+        {currentTab === tabs[0] && <About />}
+        {/* {currentTab === tabs[1] && <Portfolio />}
+        {currentTab === tabs[2] && <Contact />}
+        {currentTab === tabs[3] && <Resume />} */}
+      </main>
     </div>
   );
 }
