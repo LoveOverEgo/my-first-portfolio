@@ -76,11 +76,7 @@ header nav ul {
     justify-content: space-evenly;
 }
 
-header a {
-    text-decoration: none;
-}
-
-header nav ul li a {
+header nav ul li span {
     display: block;
     color: inherit;
     transition: transform .2s ease, background-size .2s ease-in-out;
@@ -92,7 +88,7 @@ header nav ul li a {
     cursor: pointer;
 }
 
-header nav ul li a:hover, header nav ul li a:active {
+header nav ul li span:hover, header nav ul li span:active {
     text-decoration: none;
     transform: scale(1.1);
     background-size: 100% 1px;

@@ -15,12 +15,12 @@ function Nav(props) {
                     {tabs.map((tab, index) => {
                         return(
                             <li key={index} >
-                                <a
+                                <span
                                   onClick={() => setCurrentTab(tab)}
                                   className={currentTab.name === tab.name && 'navActive'} 
                                 >
                                     {tab.name}
-                                </a>
+                                </span>
                             </li>
                         )
                     })}

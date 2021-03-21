@@ -25,7 +25,7 @@ function ToggleTheme() {
     };
 
     return(
-        <div class="theme" onClick={handleTheme} >
+        <div className="theme" onClick={handleTheme} >
             <svg width="20px" height="20px">
                 <title>Theme toggle</title>
                 <defs></defs>

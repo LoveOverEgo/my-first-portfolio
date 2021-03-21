@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Nav from './components/Nav';
 import About from './components/About';
+import Portfolio from './components/Portfolio';
 
 function App() {
   const [ tabs ] = useState([
@@ -15,11 +16,11 @@ function App() {
   return (
     <div className="App">
       <Nav tabs={tabs} setCurrentTab={setCurrentTab} currentTab={currentTab}/>
-      <div class="background"></div>
+      <div className="background"></div>
       <main>
         {currentTab === tabs[0] && <About />}
-        {/* {currentTab === tabs[1] && <Portfolio />}
-        {currentTab === tabs[2] && <Contact />}
+        {currentTab === tabs[1] && <Portfolio />}
+        {/*{currentTab === tabs[2] && <Contact />}
         {currentTab === tabs[3] && <Resume />} */}
       </main>
     </div>

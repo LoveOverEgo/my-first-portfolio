@@ -8,18 +8,18 @@ function About() {
     return(
         <section id="about" className="cover">
             <ToggleTheme />
-            <img className="profilePic" src={ProfilePic} alt="profile picture" title="Michael's picture 2020" />
+            <img className="profilePic" src={ProfilePic} alt="profile" title="Michael's picture 2020" />
             <div className="bio-wrapper">
                 <div className="intro">
                     <h1>Michael Arvelo</h1>
                     <h1>Full-Stack Web Developer</h1>
                 </div>
-                <div className={`info ${infoStatus ? 'active' : ''}`}>
+                <div className={infoStatus ? 'info active' : 'info'}>
                     <div className="bio">
                         <p>I am a passionate developer and enjoy putting my all into my work. I love learning new programming languages and frameworks, always improving what I already know, and putting my skills to the test!</p>
                         <i className="fa fa-info fa-1x infoBtn" onClick={() => {setInfoStatus(!infoStatus)}}></i>
                     </div>
-                    <div class="social-icons">
+                    <div className="social-icons">
                         <a href="https://stackoverflow.com/users/13529182/michael-arvelo" target="_blank" title="Stack OverFlow">
                             <i className="fab fa-stack-overflow"></i>
                         </a>
