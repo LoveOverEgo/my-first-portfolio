@@ -1,35 +1,3 @@
-// ------------------------------------------ ABOUT (INFO BTN) TOGGLE ------------------------------------
-// About btn clicked: toggle tab 
-$(".infoBtn").on("click", function() {
-    document.getElementById('about').scrollIntoView({behavior: 'smooth'});
-    $(".info").toggleClass("active");
-});
-
-// About link clicked in nav: toggle tab
-$("#aboutBtn").on("click", function() {
-    document.getElementById('about').scrollIntoView({behavior: 'smooth'});
-    $(".info").toggleClass("active");
-});
-
-// Toggle theme on click of btn
-var themeStatus = "light" // start page on light mode
-$(".theme svg").on("click", function() {
-    if (themeStatus === "dark") {
-        $(":root").css("--bg", "var(--bgLight)");
-        $(":root").css("--primary", "var(--primaryLight)");
-        $(":root").css("--secondary", "var(--secondaryLight)");
-        $(":root").css("--accent", "var(--accentLight)");
-        $(":root").css("--boxShadow", "rgb(156 156 156)");
-        themeStatus = "light";
-    } else if (themeStatus === "light") {
-        $(":root").css("--bg", "var(--bgDark)");
-        $(":root").css("--primary", "var(--primaryDark)");
-        $(":root").css("--secondary", "var(--secondaryDark)");
-        $(":root").css("--accent", "var(--accentDark)");
-        $(":root").css("--boxShadow", "black");
-        themeStatus = "dark";
-    }
-});
 
 // ------------------------------------------ SCROLLING ------------------------------------
 // Viewport Function

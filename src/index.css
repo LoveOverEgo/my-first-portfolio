@@ -39,7 +39,7 @@ html, body {
 }
 
 section {
-    height: 100vh;
+    height: 80vh;
     scroll-snap-align: start;
     scroll-snap-stop: always;
 }
@@ -113,7 +113,8 @@ footer {
 .cover {
     width: 100%;
     display: flex;
-    padding: 70px 0 0 70px;
+    justify-content: center;
+    align-items: center;
     position: relative;
     scroll-snap-align: start;
     scroll-snap-stop: always;
@@ -154,6 +155,7 @@ footer {
     margin: 50px;
     text-align: center;
     display: inline-block;
+    min-width: 435px;
 }
 
 .cover .intro h1 {
@@ -231,7 +233,7 @@ footer {
 }
 
 .info.active .bio {
-    width: 530px;
+    width: 500px;
     height: 100%;
     border-radius: 5px;
     font-size: 20px;
