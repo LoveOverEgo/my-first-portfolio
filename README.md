@@ -4,7 +4,5 @@
 This is a portfolio website to showcase my work for future employers
 
 ## Installation
-Visit the live website through github [https://michaeldevelopscode.github.io/developer-portfolio/]
-
-## Screenshots
+Visit the live website through github [https://michaeldevelopscode.github.io/dev-portfolio2.0]
 
