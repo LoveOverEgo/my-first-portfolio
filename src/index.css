@@ -264,11 +264,7 @@ footer {
     width: 530px;
 }
 
-.info .social-icons {
-    display: flex;
-}
-
-.info .social-icons a {
+.social-icons a {
     color: var(--primary);
     padding: 10px;
     font-size: 20px;
@@ -452,50 +448,55 @@ footer {
 /* APPLICATION ENDS */
 
 /* CONTACT STARTS */
-#contact {
-    padding-bottom: 250px;
-}
-.contact-header {
-    padding-bottom: 100px;
+#contact-form h1, form {
+    text-align: center;
+    padding: 10px;
 }
 
-.contact-info {
-    align-items: center;
-    margin: 0 0 0 22px;
-    flex-wrap: wrap;
-}
-
-.contact-info ul {
+#contact-form form div {
+    padding: 10px;
     display: flex;
-    flex-direction: column;
-    list-style: none;
+    justify-content: center;
     align-items: center;
-    text-decoration: none;
 }
 
-.contact-info ul li {
-    padding: 5px 5px;
+#contact-form button {
+    background: none;
+    border: none;
     font-size: 20px;
+    transition: 1s ease;
 }
 
-.contact-info ul li a {
-    color: #024e76;
-    padding: 5px 5px;
-    border-color: #024e76;
-    text-decoration: none;
-    transition: transform .2s ease, background-size .2s ease-in-out;
-    background-position: bottom left;
-    background-size: 0% 3px;
-    background-image: linear-gradient(var(--primary), var(--primary));
-    background-repeat: no-repeat;
-    padding-bottom: 3px;
+#contact-form button:hover {
+    cursor: pointer;
+    font-size: 22px;
 }
 
-.contact-info ul li a:hover, header nav ul li a:active {
-    text-decoration: none;
-    transform: scale(1.1);
-    background-size: 100% 1px;
+#contact-form input {
+    width: 250px;
+    height: 30px;
 }
+
+#contact-form textarea {
+    width: 400px;
+    height: 150px;
+}
+
+#contact-form div {
+
+}
+
+
+.resume-link {
+    text-align: center;
+    padding: 100px;
+}
+
+.resume-link a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
 /* CONTACT ENDS */
 
 .flex-row {

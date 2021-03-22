@@ -19,20 +19,6 @@ function About() {
                         <p>I am a passionate developer and enjoy putting my all into my work. I love learning new programming languages and frameworks, always improving what I already know, and putting my skills to the test!</p>
                         <i className="fa fa-info fa-1x infoBtn" onClick={() => {setInfoStatus(!infoStatus)}}></i>
                     </div>
-                    <div className="social-icons">
-                        <a href="https://stackoverflow.com/users/13529182/michael-arvelo" target="_blank" rel='noreferrer' title="Stack OverFlow">
-                            <i className="fab fa-stack-overflow"></i>
-                        </a>
-                        <a href="https://github.com/MichaelDevelopsCode" target="_blank" rel='noreferrer' title="GitHub">
-                            <i className="fab fa-github"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/michael-arvelo-169925148/" target="_blank" rel='noreferrer' title="LinkedIn">
-                            <i className="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://twitter.com/MichaelDevsCode" target="_blank" rel='noreferrer' title="Twitter">
-                            <i className="fab fa-twitter"></i>
-                        </a>
-                    </div>
                     <i className="fa fa-angle-down fa-2x infoBtn" onClick={() => {setInfoStatus(!infoStatus)}}></i>
                     <h4>About Me</h4>
                 </div>
