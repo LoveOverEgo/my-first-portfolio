@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 function Nav(props) {
     const {
@@ -6,6 +6,10 @@ function Nav(props) {
         setCurrentTab,
         currentTab
     } = props;
+
+    useEffect(() => {
+        document.title = currentTab.name;
+    }, [currentTab]);
 
     return(
         <header>
@@ -17,7 +21,7 @@ function Nav(props) {
                             <li key={index} >
                                 <span
                                   onClick={() => setCurrentTab(tab)}
-                                  className={currentTab.name === tab.name && 'navActive'} 
+                                  className={(currentTab.name === tab.name) ? 'navActive':''} 
                                 >
                                     {tab.name}
                                 </span>

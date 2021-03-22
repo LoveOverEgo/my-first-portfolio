@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PhotoHutIMG from '../../assets/images/photohut.png';
 import PlanDateNightIMG from '../../assets/images/plan-your-date-night.png';
 import RunBuddyIMG from '../../assets/images/run-buddy.png';
@@ -40,39 +40,44 @@ function Portfolio() {
         }
     ]);
 
-    const [index, setIndex] = useState(0)
+    const [index, setIndex] = useState(0);
     const [currentProject, setCurrentProject] = useState(projects[index]);
 
+    // PREV Project btn
     function prevProject() {
         if(index === 0) {
             setIndex(projects.length-1);
         } else {
             setIndex(index - 1);
         }
-
-        setCurrentProject(projects[index]);
-        console.log(currentProject);
     }
 
+    //NEXT Project btn
     function nextProject() {
         if(index === (projects.length-1)) {
             setIndex(0);
         } else {
             setIndex(index + 1);
         }
-
-        setCurrentProject(projects[index]);
-        console.log(currentProject);
     }
+
+    // use effect to update the projects after clicks
+    useEffect(()=> {
+        setCurrentProject(projects[index]);
+    }, [projects, index, currentProject]);
 
     return(
         <section id="work" className="sections">
+            <div className="slideshowBtn" onClick={prevProject}>
+                <i className="fa fa-angle-left fa-2x"></i>
+                <span> Prev</span>
+            </div>
             <div id="apps" className="applications flex-row">
                 <ul className="flex-row">
                     <li className="card">
                         <div className="work-content work1">
                             <div className="content">
-                                <img src={currentProject.img} ></img>
+                                <img src={currentProject.img} alt="project screenshot" ></img>
                                 <div>
                                     <h2>{currentProject.name}</h2>
                                     <h4>{currentProject.tech}</h4>
@@ -84,8 +89,8 @@ function Portfolio() {
                                 <div>
                                     <p>{currentProject.description}</p>
                                     {/* Incase Not all projects have live site  */}
-                                    {currentProject.liveUrl && <a href={currentProject.liveUrl} target="_blank">Visit live site</a>}
-                                    <a href={currentProject.github} target="_blank">Visit GitHub Repo</a>
+                                    {currentProject.liveUrl && <a href={currentProject.liveUrl} target="_blank" rel='noreferrer'>Visit live site</a>}
+                                    <a href={currentProject.github} target="_blank" rel='noreferrer'>Visit GitHub Repo</a>
                                 </div>
                             </div>
                         </div>
@@ -116,8 +121,10 @@ function Portfolio() {
                     })} */}
                 </ul>
             </div>
-            <i className="fa fa-angle-left fa-2x infoBtn" onClick={prevProject}></i>
-            <i className="fa fa-angle-right fa-2x infoBtn" onClick={nextProject}></i>
+            <div className="slideshowBtn" onClick={nextProject}>
+                <span>Next </span>
+                <i className="fa fa-angle-right fa-2x"></i>
+            </div>
         </section>
     );
 }
