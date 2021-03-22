@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/dev-portfolio2.0/static/css/main.4d0c37b4.chunk.css",
+    "main.js": "/dev-portfolio2.0/static/js/main.e6ec96ca.chunk.js",
+    "main.js.map": "/dev-portfolio2.0/static/js/main.e6ec96ca.chunk.js.map",
+    "runtime-main.js": "/dev-portfolio2.0/static/js/runtime-main.bbb2cda7.js",
+    "runtime-main.js.map": "/dev-portfolio2.0/static/js/runtime-main.bbb2cda7.js.map",
+    "static/js/2.418ee383.chunk.js": "/dev-portfolio2.0/static/js/2.418ee383.chunk.js",
+    "static/js/2.418ee383.chunk.js.map": "/dev-portfolio2.0/static/js/2.418ee383.chunk.js.map",
+    "static/js/3.2c179a21.chunk.js": "/dev-portfolio2.0/static/js/3.2c179a21.chunk.js",
+    "static/js/3.2c179a21.chunk.js.map": "/dev-portfolio2.0/static/js/3.2c179a21.chunk.js.map",
+    "index.html": "/dev-portfolio2.0/index.html",
+    "static/css/main.4d0c37b4.chunk.css.map": "/dev-portfolio2.0/static/css/main.4d0c37b4.chunk.css.map",
+    "static/js/2.418ee383.chunk.js.LICENSE.txt": "/dev-portfolio2.0/static/js/2.418ee383.chunk.js.LICENSE.txt",
+    "static/media/MichaelArvelo_Resume.030db6ca.pdf": "/dev-portfolio2.0/static/media/MichaelArvelo_Resume.030db6ca.pdf",
+    "static/media/horiseon.77e03dad.png": "/dev-portfolio2.0/static/media/horiseon.77e03dad.png",
+    "static/media/photohut.c5603f4d.png": "/dev-portfolio2.0/static/media/photohut.c5603f4d.png",
+    "static/media/plan-your-date-night.cfc7313c.png": "/dev-portfolio2.0/static/media/plan-your-date-night.cfc7313c.png",
+    "static/media/profile.d4c6b81c.png": "/dev-portfolio2.0/static/media/profile.d4c6b81c.png",
+    "static/media/run-buddy.4e473afd.png": "/dev-portfolio2.0/static/media/run-buddy.4e473afd.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bbb2cda7.js",
+    "static/js/2.418ee383.chunk.js",
+    "static/css/main.4d0c37b4.chunk.css",
+    "static/js/main.e6ec96ca.chunk.js"
+  ]
+}
