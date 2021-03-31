@@ -10,16 +10,19 @@
     --bgLight: white;
     --bgDark: #0f1117;
     --primaryLight: #111213;
-    --primaryDark: #ffffff;
+    --primaryDark: #bbbbbb;
     --secondaryLight: rgb(197, 197, 197);
     --secondaryDark: #4e5257;
     --accentDark: #303940;
     --accentLight:#C7D0E1;
+    --borderLight:#dddddd;
+    --borderDark: #292929;
 
     --bg: var(--bgLight);
     --primary: var(--primaryLight);
     --secondary: var(--secondaryLight);
     --accent: var(--accentLight);
+    --border: var(var(--borderLight));
     --boxShadow: black; /* Specifically for work section cards */
 }
 
@@ -27,6 +30,10 @@ html, body {
     max-width: 100%;
     color: var(--primary);
     font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    overflow: scroll;
 }
 
 section {
@@ -448,44 +455,77 @@ footer {
 /* APPLICATION ENDS */
 
 /* CONTACT STARTS */
-#contact-form h1, form {
+.contact-form .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+    padding: 0 150px 0 150px;
+}
+.contact-form .card {
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--primary);
+    box-shadow: var(--boxShadow);
+    text-align: center;
+    word-wrap: break-word;
+    border-radius: 10px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    transition: .5s ease;
+}
+
+.contact-form .card:hover {
+  cursor: pointer;
+  background: var(--primary);
+  color: var(--secondary);
+}
+
+.contact-form .title {
+  font-weight: 300;
+}
+
+.contact-form .logo {
+    font-size: 3em;
+}
+/* CONTACT ENDS */
+
+/*CONTACT FROM START*/
+.contact-form h1, form {
     text-align: center;
     padding: 10px;
 }
 
-#contact-form form div {
+.contact-form form div {
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#contact-form button {
+.contact-form button {
     background: none;
     border: none;
     font-size: 20px;
     transition: 1s ease;
 }
 
-#contact-form button:hover {
+.contact-form button:hover {
     cursor: pointer;
     font-size: 22px;
 }
 
-#contact-form input {
+.contact-form input {
     width: 250px;
     height: 30px;
 }
 
-#contact-form textarea {
+.contact-form textarea {
     width: 400px;
     height: 150px;
 }
-
-#contact-form div {
-
-}
-
 
 .resume-link {
     text-align: center;
@@ -497,7 +537,7 @@ footer {
     color: var(--primary);
 }
 
-/* CONTACT ENDS */
+/* CONTACT FORM ENDS */
 
 .flex-row {
     display: flex;

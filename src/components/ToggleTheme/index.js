@@ -10,6 +10,7 @@ function ToggleTheme() {
             document.documentElement.style.setProperty("--primary", "var(--primaryLight)");
             document.documentElement.style.setProperty("--secondary", "var(--secondaryLight)");
             document.documentElement.style.setProperty("--accent", "var(--accentLight)");
+            document.documentElement.style.setProperty("--border", "var(--borderLight)");
             document.documentElement.style.setProperty("--boxShadow", "rgb(156 156 156)");
 
             themeStatus = "light";
@@ -18,6 +19,7 @@ function ToggleTheme() {
             document.documentElement.style.setProperty("--primary", "var(--primaryDark)");
             document.documentElement.style.setProperty("--secondary", "var(--secondaryDark)");
             document.documentElement.style.setProperty("--accent", "var(--accentDark)");
+            document.documentElement.style.setProperty("--border", "var(--borderDark)");
             document.documentElement.style.setProperty("--boxShadow", "black");
 
             themeStatus = "dark";
