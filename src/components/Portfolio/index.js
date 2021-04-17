@@ -3,9 +3,18 @@ import PhotoHutIMG from '../../assets/images/photohut.png';
 import PlanDateNightIMG from '../../assets/images/plan-your-date-night.png';
 import RunBuddyIMG from '../../assets/images/run-buddy.png';
 import HoriseonIMG from '../../assets/images/horiseon.png';
+import ManiacsIMG from '../../assets/images/maniac.png';
 
 function Portfolio() {
     const [projects] = useState([
+        {
+            name: 'Maniacs of HHN',
+            tech: 'React.js | graphQL | Mongoose | Express',
+            description: 'Maniacs of Horror Nights is a content-driven social media content based around Halloween Horror Nights. Users are able to log in with their own account, sign out, and use offline capabilities to browse content and the maps.',
+            liveUrl: 'https://maniacs-of-hhn.herokuapp.com/',
+            github: 'https://github.com/dcharney/maniacs-of-hhn',
+            img: ManiacsIMG
+        },
         {
             name: 'Photo Hut',
             tech: 'Node.js | MySql | Handlebars | Express',
