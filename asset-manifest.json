@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/dev-portfolio2.0/static/css/main.3755b90e.chunk.css",
-    "main.js": "/dev-portfolio2.0/static/js/main.6bf695af.chunk.js",
-    "main.js.map": "/dev-portfolio2.0/static/js/main.6bf695af.chunk.js.map",
+    "main.js": "/dev-portfolio2.0/static/js/main.fe4b6583.chunk.js",
+    "main.js.map": "/dev-portfolio2.0/static/js/main.fe4b6583.chunk.js.map",
     "runtime-main.js": "/dev-portfolio2.0/static/js/runtime-main.b56db0e9.js",
     "runtime-main.js.map": "/dev-portfolio2.0/static/js/runtime-main.b56db0e9.js.map",
     "static/js/2.737b5069.chunk.js": "/dev-portfolio2.0/static/js/2.737b5069.chunk.js",
@@ -14,6 +14,7 @@
     "static/js/2.737b5069.chunk.js.LICENSE.txt": "/dev-portfolio2.0/static/js/2.737b5069.chunk.js.LICENSE.txt",
     "static/media/MichaelArvelo_Resume.030db6ca.pdf": "/dev-portfolio2.0/static/media/MichaelArvelo_Resume.030db6ca.pdf",
     "static/media/horiseon.77e03dad.png": "/dev-portfolio2.0/static/media/horiseon.77e03dad.png",
+    "static/media/maniac.422c3832.png": "/dev-portfolio2.0/static/media/maniac.422c3832.png",
     "static/media/photohut.c5603f4d.png": "/dev-portfolio2.0/static/media/photohut.c5603f4d.png",
     "static/media/plan-your-date-night.cfc7313c.png": "/dev-portfolio2.0/static/media/plan-your-date-night.cfc7313c.png",
     "static/media/profile.d4c6b81c.png": "/dev-portfolio2.0/static/media/profile.d4c6b81c.png",
@@ -23,6 +24,6 @@
     "static/js/runtime-main.b56db0e9.js",
     "static/js/2.737b5069.chunk.js",
     "static/css/main.3755b90e.chunk.css",
-    "static/js/main.6bf695af.chunk.js"
+    "static/js/main.fe4b6583.chunk.js"
   ]
 }
