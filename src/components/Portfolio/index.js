@@ -51,9 +51,13 @@ function Portfolio() {
 
     const [index, setIndex] = useState(0);
     const [currentProject, setCurrentProject] = useState(projects[index]);
+    const [animation, setAnimation] = useState(0);
 
     // PREV Project btn
     function prevProject() {
+        // reset animation before changing
+        setAnimation(0);
+
         if(index === 0) {
             setIndex(projects.length-1);
         } else {
@@ -63,6 +67,9 @@ function Portfolio() {
 
     //NEXT Project btn
     function nextProject() {
+        // reset animation before changing
+        setAnimation(0);
+
         if(index === (projects.length-1)) {
             setIndex(0);
         } else {
@@ -73,6 +80,8 @@ function Portfolio() {
     // use effect to update the projects after clicks
     useEffect(()=> {
         setCurrentProject(projects[index]);
+        // set animation back to 1 for new render
+        setAnimation(1);
     }, [projects, index, currentProject]);
 
     return(
@@ -85,7 +94,7 @@ function Portfolio() {
                 <ul className="flex-row">
                     <li className="card">
                         <div className="work-content work1">
-                            <div className="content">
+                            <div className="content" animation={animation}>
                                 <img src={currentProject.img} alt="project screenshot" ></img>
                                 <div>
                                     <h2>{currentProject.name}</h2>

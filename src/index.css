@@ -353,13 +353,22 @@ footer {
 
 .applications ul:hover .card {
     box-shadow: 0 24px 48px -16px #000;
-    transition: 2s;
+    transition: ease 2s;
 }
 
 .applications ul .card .work-content {
     width: 350px;
     height: 250px;
     transition: 0.5s;
+}
+
+.applications ul .card .work-content.work1 .content[animation="1"] {
+    animation: fade 2s both;
+}
+
+@keyframes fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 .applications ul .card .work-content.work1{
@@ -490,54 +499,62 @@ footer {
 .contact-form .logo {
     font-size: 3em;
 }
-/* CONTACT ENDS */
 
-/*CONTACT FROM START*/
 .contact-form h1, form {
     text-align: center;
-    padding: 10px;
+    padding: 25px;
 }
+/* CONTACT ENDS */
 
-.contact-form form div {
-    padding: 10px;
+/* RESUME STARTS */
+.resume .container {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    padding: 0 150px 0 150px;
 }
 
-.contact-form button {
+.resume .container .card {
+    transition: transform .2s ease, background-size .2s ease-in-out;
+    background-position: bottom left;
+    background-size: 0% 3px;
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-repeat: no-repeat;
+    padding-bottom: 3px;
+    text-decoration: none;
+    color: var(--primary);
+}
+
+.resume .container .card:hover {
+    cursor: pointer;
+    font-size: 17px;
+    text-decoration: none;
+    background-size: 100% 1px;
+}
+
+.resume .container div p {
+    text-align: center;
+}
+
+.resume .container div .button-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.resume .container div .button-wrapper button {
     background: none;
     border: none;
     font-size: 20px;
     transition: 1s ease;
 }
 
-.contact-form button:hover {
+.resume .container div .button-wrapper button:hover {
     cursor: pointer;
     font-size: 22px;
 }
 
-.contact-form input {
-    width: 250px;
-    height: 30px;
-}
-
-.contact-form textarea {
-    width: 400px;
-    height: 150px;
-}
-
-.resume-link {
-    text-align: center;
-    padding: 100px;
-}
-
-.resume-link a {
-    text-decoration: none;
-    color: var(--primary);
-}
-
-/* CONTACT FORM ENDS */
+/* RESUME ENDS */
 
 .flex-row {
     display: flex;
