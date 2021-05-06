@@ -16,7 +16,7 @@ function About() {
                 </div>
                 <div className={infoStatus ? 'info active' : 'info'}>
                     <div className="bio">
-                        <p>I am a passionate developer and enjoy putting my all into my work. I love learning new programming languages and frameworks, always improving what I already know, and putting my skills to the test!</p>
+                        <p>Full-Stack Web Developer that loves continous learning, connecting, and collaborating with others. Over 3 years of experience learning web development, collaboration, problem solving and developed quality skills ranging from Backend to Frontend (HTML, JS, CSS, React.js, Node, SQL, Databases, and more). Diving into my passion I graduated from University of Central Florida coding bootcamp and recieved my Full-stack web development Certificate.</p>
                         <i className="fa fa-info fa-1x infoBtn" onClick={() => {setInfoStatus(!infoStatus)}}></i>
                     </div>
                     <i className="fa fa-angle-down fa-2x infoBtn" onClick={() => {setInfoStatus(!infoStatus)}}></i>
